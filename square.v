@@ -59,6 +59,8 @@ Section square_crt.
     intros (na & Ha) (nb & Hb).
     destruct rel_iter_square with (1 := Ha) (2 := Hb)
       as (g & H1 & H2); auto.
+    
+    induction n as [ | n IHn ].
 
   Admitted.
 
@@ -75,7 +77,7 @@ Section confluent_church_rosser.
   Fact confluent_church_rosser : church_rosser R.
   Proof.
     intros a b; split.
-    induction 1 as [ x y | x | x y _ (f & H1 & H2) | x y z _ (a & H1 & H2) _ (b & H3 & H4)].
+    induction 1. as [ x y | x | x y _ (f & H1 & H2) | x y z _ (a & H1 & H2) _ (b & H3 & H4)].
     exists y; split; [ constructor 1 | constructor 2]; auto.
     exists x; split; constructor 2; auto.
     exists f; auto.

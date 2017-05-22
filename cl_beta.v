@@ -42,13 +42,20 @@ Proof. apply crt_inc_crst. Qed.
 Fact cl_beta_cl_eq f g : f -b-> g -> f ~cl g.
 Proof.
   induction 1.
-  constructor.
-Admitted.
+  apply in_cl_eq_I.
+  apply in_cl_eq_K.
+  apply in_cl_eq_S.
+  apply in_cl_eq_3; auto.
+  apply in_cl_eq_4; auto.
+Qed.
   
 Fact cl_beta_rt_cl_eq f g : f -b>> g -> f ~cl g.
 Proof.
   induction 1 as [ | | f g h ].
-Admitted.
+  apply cl_beta_cl_eq; auto.
+  apply in_cl_eq_0.
+  apply cl_eq_trans with g; auto.
+Qed.
 
 Fact cl_beta_rt_app f g a b : f -b>> g -> a -b>> b -> f o a -b>> g o b.
 Proof.
@@ -67,17 +74,51 @@ Qed.
 Fact cl_beta_eq_cl_eq f g : f ~b g -> f ~cl g.
 Proof.
   induction 1 as [ | | | f g h ].
-Admitted.
+  apply cl_beta_cl_eq; auto.
+  apply in_cl_eq_0.
+  apply in_cl_eq_1; auto.
+  apply cl_eq_trans with g; auto.
+Qed.
 
 Fact cl_beta_eq_app f g a b : f ~b g -> a ~b b -> f o a ~b g o b.
 Proof.
+    induction 2.
+
+(*
+  induction 1.
+  intro H0.
+  apply cl_beta_cl_eq in H.
+  apply cl_beta_eq_cl_eq in H0.
+  constructor 1.
+admit.
+    
+    intro H1.
+    constructor 1; constructor 5.
+admit.
+    intro H2.
+*)
+  constructor 1.
+admit.
+  intro H1.
+  constructor 1.
+admit.
+  intro H2.
+admit.
+  intro H3.
+admit.
+
 Admitted.
 
 Fact cl_beta_equiv_cl_eq f g : f ~b g <-> f ~cl g.
 Proof.
   split.
   apply cl_beta_eq_cl_eq.
-  induction 1 as [ | | | | x y | | | ].
+  induction 1 as [ | | | | x y | | | ]; constructor 1.
+  constructor 1.
+  constructor 2.
+  constructor 3.
+  apply cl_beta_eq_cl_eq.
+  
 Admitted.
 
 (* See the definition of cl_rho in file cl_confluent *)
@@ -88,20 +129,33 @@ Local Notation "x '-r>>' y" := (crt cl_rho x y) (at level 70).
 Fact cl_beta_rho f g : f -b-> g -> f -r-> g.
 Proof.
   induction 1.
+  constructor 1.
+  constructor 2.
+  constructor 3.
+  constructor 4.
+
 Admitted.
 
 Fact cl_rho_beta_rt f g : f -r-> g -> f -b>> g.
 Proof.
-  induction 1.
+  induction 1; constructor 1.
+  constructor 1.
+  constructor 2.
+  constructor 3.
+admit.
+  constructor 4.
 Admitted.
 
 Lemma cl_rho_rt_beta_rt_eq f g : f -r>> g <-> f -b>> g.
 Proof.
   split.
     
-  induction 1 as [ | | x y ]; admit.
+  induction 1 as [ | | x y ]; apply cl_rho_beta_rt; auto.
 
-  induction 1 as [ | | x y ]; admit.
+  constructor 4.
+admit.
+
+  induction 1 as [ | | x y ]; apply cl_rho_beta_rt. constructor 1.
 Admitted.
 
 Corollary cl_rho_cl_eq f g : f -r-> g -> f ~cl g.

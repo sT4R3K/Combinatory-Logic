@@ -125,6 +125,9 @@ Section inversion_lemmas.
   
   Fact cl_beta_I_0_inv v : I -b-> v -> False.
   Proof.
+(*
+    intros H0.
+    apply (H0 (v)).*)
   Admitted.
 
 End inversion_lemmas.

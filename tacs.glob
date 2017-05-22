@@ -1,0 +1,18 @@
+DIGEST d7ab14ed8b6eaf9f35c1cf8ef529677b
+FTop.tacs
+prf 526:531 <> eq_gen
+R545:548 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R544:544 Top.tacs <> X var
+R559:559 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R582:586 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R587:587 Top.tacs <> P var
+R589:589 Top.tacs <> x var
+R575:578 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R579:579 Top.tacs <> P var
+R581:581 Top.tacs <> y var
+R571:573 Coq.Init.Logic <> :type_scope:x_'='_x not
+R570:570 Top.tacs <> y var
+R574:574 Top.tacs <> x var
+R618:624 Coq.Init.Logic <> eq_refl constr
+R618:624 Coq.Init.Logic <> eq_refl constr
+R662:667 Top.tacs <> eq_gen thm

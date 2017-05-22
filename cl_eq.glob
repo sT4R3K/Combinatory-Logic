@@ -1,0 +1,302 @@
+DIGEST 49b0ecbbbd071b32b3c1208db2ed2da7
+FTop.cl_eq
+R536:537 Top.cl <> <> lib
+sec 574:587 <> cl_equivalence
+ind 959:963 <> cl_eq
+constr 1004:1013 <> in_cl_eq_I
+constr 1065:1074 <> in_cl_eq_K
+constr 1125:1134 <> in_cl_eq_S
+constr 1195:1204 <> in_cl_eq_0
+constr 1255:1264 <> in_cl_eq_1
+constr 1396:1405 <> in_cl_eq_2
+constr 1594:1603 <> in_cl_eq_3
+constr 1740:1749 <> in_cl_eq_4
+R973:976 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R983:986 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R977:982 Top.cl <> clterm ind
+R967:972 Top.cl <> clterm ind
+R1908:1912 Top.cl_eq <> cl_eq ind
+R1046:1050 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1042:1044 Top.cl <> ::x_'o'_x not
+R1041:1041 Top.cl <> I syndef
+R1045:1045 Top.cl_eq <> x var
+R1051:1051 Top.cl_eq <> x var
+R1107:1111 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1103:1105 Top.cl <> ::x_'o'_x not
+R1099:1101 Top.cl <> ::x_'o'_x not
+R1098:1098 Top.cl <> K syndef
+R1102:1102 Top.cl_eq <> x var
+R1106:1106 Top.cl_eq <> y var
+R1112:1112 Top.cl_eq <> x var
+R1167:1171 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1163:1165 Top.cl <> ::x_'o'_x not
+R1159:1161 Top.cl <> ::x_'o'_x not
+R1155:1157 Top.cl <> ::x_'o'_x not
+R1154:1154 Top.cl <> S syndef
+R1158:1158 Top.cl_eq <> x var
+R1162:1162 Top.cl_eq <> y var
+R1166:1166 Top.cl_eq <> z var
+R1177:1180 Top.cl <> ::x_'o'_x not
+R1186:1186 Top.cl <> ::x_'o'_x not
+R1173:1175 Top.cl <> ::x_'o'_x not
+R1172:1172 Top.cl_eq <> x var
+R1176:1176 Top.cl_eq <> z var
+R1182:1184 Top.cl <> ::x_'o'_x not
+R1181:1181 Top.cl_eq <> y var
+R1185:1185 Top.cl_eq <> z var
+R1237:1241 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1236:1236 Top.cl_eq <> x var
+R1242:1242 Top.cl_eq <> x var
+R1303:1351 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1353:1357 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1352:1352 Top.cl_eq <> y var
+R1358:1358 Top.cl_eq <> x var
+R1297:1301 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1296:1296 Top.cl_eq <> x var
+R1302:1302 Top.cl_eq <> y var
+R1444:1492 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1500:1548 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1550:1554 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1549:1549 Top.cl_eq <> x var
+R1555:1555 Top.cl_eq <> z var
+R1494:1498 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1493:1493 Top.cl_eq <> y var
+R1499:1499 Top.cl_eq <> z var
+R1438:1442 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1437:1437 Top.cl_eq <> x var
+R1443:1443 Top.cl_eq <> y var
+R1642:1686 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1692:1696 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1688:1690 Top.cl <> ::x_'o'_x not
+R1687:1687 Top.cl_eq <> x var
+R1691:1691 Top.cl_eq <> z var
+R1698:1700 Top.cl <> ::x_'o'_x not
+R1697:1697 Top.cl_eq <> y var
+R1701:1701 Top.cl_eq <> z var
+R1632:1640 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1631:1631 Top.cl_eq <> x var
+R1641:1641 Top.cl_eq <> y var
+R1792:1836 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1842:1846 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1838:1840 Top.cl <> ::x_'o'_x not
+R1837:1837 Top.cl_eq <> x var
+R1841:1841 Top.cl_eq <> y var
+R1848:1850 Top.cl <> ::x_'o'_x not
+R1847:1847 Top.cl_eq <> x var
+R1851:1851 Top.cl_eq <> z var
+R1782:1790 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R1781:1781 Top.cl_eq <> y var
+R1791:1791 Top.cl_eq <> z var
+R1908:1912 Top.cl_eq <> cl_eq ind
+not 1894:1894 cl_equivalence ::x_'~cl'_x
+prf 1981:1990 <> cl_eq_refl
+R2003:2006 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2008:2012 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2007:2007 Top.cl_eq <> f var
+R2013:2013 Top.cl_eq <> g var
+R1999:2001 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1998:1998 Top.cl_eq <> f var
+R2002:2002 Top.cl_eq <> g var
+def 2053:2061 <> cl_eq_sym
+R2066:2075 Top.cl_eq <> in_cl_eq_1 constr
+def 2092:2102 <> cl_eq_trans
+R2107:2116 Top.cl_eq <> in_cl_eq_2 constr
+prf 2129:2137 <> cl_eq_app
+R2156:2159 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2167:2170 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2176:2180 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2172:2174 Top.cl <> ::x_'o'_x not
+R2171:2171 Top.cl_eq <> x var
+R2175:2175 Top.cl_eq <> a var
+R2182:2184 Top.cl <> ::x_'o'_x not
+R2181:2181 Top.cl_eq <> y var
+R2185:2185 Top.cl_eq <> b var
+R2161:2165 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2160:2160 Top.cl_eq <> a var
+R2166:2166 Top.cl_eq <> b var
+R2150:2154 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2149:2149 Top.cl_eq <> x var
+R2155:2155 Top.cl_eq <> y var
+prf 2219:2227 <> cl_I_prop
+R2238:2242 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2234:2236 Top.cl <> ::x_'o'_x not
+R2233:2233 Top.cl <> I syndef
+R2237:2237 Top.cl_eq <> x var
+R2243:2243 Top.cl_eq <> x var
+R2265:2274 Top.cl_eq <> in_cl_eq_I constr
+R2265:2274 Top.cl_eq <> in_cl_eq_I constr
+prf 2294:2302 <> cl_K_prop
+R2319:2323 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2315:2317 Top.cl <> ::x_'o'_x not
+R2311:2313 Top.cl <> ::x_'o'_x not
+R2310:2310 Top.cl <> K syndef
+R2314:2314 Top.cl_eq <> x var
+R2318:2318 Top.cl_eq <> y var
+R2324:2324 Top.cl_eq <> x var
+R2346:2355 Top.cl_eq <> in_cl_eq_K constr
+R2346:2355 Top.cl_eq <> in_cl_eq_K constr
+prf 2375:2383 <> cl_S_prop
+R2406:2410 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2402:2404 Top.cl <> ::x_'o'_x not
+R2398:2400 Top.cl <> ::x_'o'_x not
+R2394:2396 Top.cl <> ::x_'o'_x not
+R2393:2393 Top.cl <> S syndef
+R2397:2397 Top.cl_eq <> x var
+R2401:2401 Top.cl_eq <> y var
+R2405:2405 Top.cl_eq <> z var
+R2416:2419 Top.cl <> ::x_'o'_x not
+R2425:2425 Top.cl <> ::x_'o'_x not
+R2412:2414 Top.cl <> ::x_'o'_x not
+R2411:2411 Top.cl_eq <> x var
+R2415:2415 Top.cl_eq <> z var
+R2421:2423 Top.cl <> ::x_'o'_x not
+R2420:2420 Top.cl_eq <> y var
+R2424:2424 Top.cl_eq <> z var
+R2447:2456 Top.cl_eq <> in_cl_eq_S constr
+R2447:2456 Top.cl_eq <> in_cl_eq_S constr
+prf 2477:2487 <> cl_SKI_prop
+R2506:2510 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2502:2504 Top.cl <> ::x_'o'_x not
+R2498:2500 Top.cl <> ::x_'o'_x not
+R2494:2496 Top.cl <> ::x_'o'_x not
+R2493:2493 Top.cl <> S syndef
+R2497:2497 Top.cl <> K syndef
+R2501:2501 Top.cl <> I syndef
+R2505:2505 Top.cl_eq <> x var
+R2511:2511 Top.cl_eq <> x var
+R2556:2564 Top.cl_eq <> cl_S_prop thm
+R2533:2543 Top.cl_eq <> cl_eq_trans def
+R2556:2564 Top.cl_eq <> cl_S_prop thm
+R2533:2543 Top.cl_eq <> cl_eq_trans def
+prf 2601:2608 <> cl_SKI_I
+R2635:2639 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2631:2633 Top.cl <> ::x_'o'_x not
+R2627:2629 Top.cl <> ::x_'o'_x not
+R2623:2625 Top.cl <> ::x_'o'_x not
+R2622:2622 Top.cl <> S syndef
+R2626:2626 Top.cl <> K syndef
+R2630:2630 Top.cl <> I syndef
+R2634:2634 Top.cl_eq <> x var
+R2641:2643 Top.cl <> ::x_'o'_x not
+R2640:2640 Top.cl <> I syndef
+R2644:2644 Top.cl_eq <> x var
+def 2682:2685 <> cl_D
+R2695:2697 Top.cl <> ::x_'o'_x not
+R2691:2693 Top.cl <> ::x_'o'_x not
+R2690:2690 Top.cl <> S syndef
+R2694:2694 Top.cl <> I syndef
+R2698:2698 Top.cl <> I syndef
+syndef 2715:2715 <> D
+R2720:2723 Top.cl_eq <> cl_D def
+prf 2736:2744 <> cl_D_prop
+R2755:2759 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2751:2753 Top.cl <> ::x_'o'_x not
+R2750:2750 Top.cl_eq <> D syndef
+R2754:2754 Top.cl_eq <> x var
+R2761:2763 Top.cl <> ::x_'o'_x not
+R2760:2760 Top.cl_eq <> x var
+R2764:2764 Top.cl_eq <> x var
+def 2804:2807 <> cl_B
+R2823:2825 Top.cl <> ::x_'o'_x not
+R2813:2816 Top.cl <> ::x_'o'_x not
+R2822:2822 Top.cl <> ::x_'o'_x not
+R2812:2812 Top.cl <> S syndef
+R2818:2820 Top.cl <> ::x_'o'_x not
+R2817:2817 Top.cl <> K syndef
+R2821:2821 Top.cl <> S syndef
+R2826:2826 Top.cl <> K syndef
+syndef 2843:2843 <> B
+R2848:2851 Top.cl_eq <> cl_B def
+prf 2894:2902 <> cl_B_prop
+R2925:2929 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R2921:2923 Top.cl <> ::x_'o'_x not
+R2917:2919 Top.cl <> ::x_'o'_x not
+R2913:2915 Top.cl <> ::x_'o'_x not
+R2912:2912 Top.cl_eq <> B syndef
+R2916:2916 Top.cl_eq <> f var
+R2920:2920 Top.cl_eq <> g var
+R2924:2924 Top.cl_eq <> x var
+R2931:2934 Top.cl <> ::x_'o'_x not
+R2940:2940 Top.cl <> ::x_'o'_x not
+R2930:2930 Top.cl_eq <> f var
+R2936:2938 Top.cl <> ::x_'o'_x not
+R2935:2935 Top.cl_eq <> g var
+R2939:2939 Top.cl_eq <> x var
+R2963:2966 Top.cl_eq <> cl_B def
+R3021:3023 Top.cl <> ::x_'o'_x not
+R3017:3019 Top.cl <> ::x_'o'_x not
+R3007:3010 Top.cl <> ::x_'o'_x not
+R3016:3016 Top.cl <> ::x_'o'_x not
+R3003:3005 Top.cl <> ::x_'o'_x not
+R2998:3001 Top.cl <> ::x_'o'_x not
+R2997:2997 Top.cl <> K syndef
+R3002:3002 Top.cl <> S syndef
+R3012:3014 Top.cl <> ::x_'o'_x not
+R3011:3011 Top.cl <> K syndef
+R2979:2989 Top.cl_eq <> cl_eq_trans def
+R3021:3023 Top.cl <> ::x_'o'_x not
+R3017:3019 Top.cl <> ::x_'o'_x not
+R3007:3010 Top.cl <> ::x_'o'_x not
+R3016:3016 Top.cl <> ::x_'o'_x not
+R3003:3005 Top.cl <> ::x_'o'_x not
+R2998:3001 Top.cl <> ::x_'o'_x not
+R2997:2997 Top.cl <> K syndef
+R3002:3002 Top.cl <> S syndef
+R3012:3014 Top.cl <> ::x_'o'_x not
+R3011:3011 Top.cl <> K syndef
+R2979:2989 Top.cl_eq <> cl_eq_trans def
+R3044:3052 Top.cl_eq <> cl_eq_app prfax
+R3068:3076 Top.cl_eq <> cl_S_prop thm
+R3044:3052 Top.cl_eq <> cl_eq_app prfax
+R3044:3052 Top.cl_eq <> cl_eq_app prfax
+R3068:3076 Top.cl_eq <> cl_S_prop thm
+R3122:3124 Top.cl <> ::x_'o'_x not
+R3118:3120 Top.cl <> ::x_'o'_x not
+R3108:3111 Top.cl <> ::x_'o'_x not
+R3117:3117 Top.cl <> ::x_'o'_x not
+R3107:3107 Top.cl <> S syndef
+R3113:3115 Top.cl <> ::x_'o'_x not
+R3112:3112 Top.cl <> K syndef
+R3089:3099 Top.cl_eq <> cl_eq_trans def
+R3122:3124 Top.cl <> ::x_'o'_x not
+R3118:3120 Top.cl <> ::x_'o'_x not
+R3108:3111 Top.cl <> ::x_'o'_x not
+R3117:3117 Top.cl <> ::x_'o'_x not
+R3107:3107 Top.cl <> S syndef
+R3113:3115 Top.cl <> ::x_'o'_x not
+R3112:3112 Top.cl <> K syndef
+R3089:3099 Top.cl_eq <> cl_eq_trans def
+R3145:3153 Top.cl_eq <> cl_eq_app prfax
+R3169:3177 Top.cl_eq <> cl_K_prop thm
+R3145:3153 Top.cl_eq <> cl_eq_app prfax
+R3145:3153 Top.cl_eq <> cl_eq_app prfax
+R3145:3153 Top.cl_eq <> cl_eq_app prfax
+R3169:3177 Top.cl_eq <> cl_K_prop thm
+R3213:3221 Top.cl_eq <> cl_S_prop thm
+R3190:3200 Top.cl_eq <> cl_eq_trans def
+R3213:3221 Top.cl_eq <> cl_S_prop thm
+R3190:3200 Top.cl_eq <> cl_eq_trans def
+R3241:3249 Top.cl_eq <> cl_eq_app prfax
+R3241:3249 Top.cl_eq <> cl_eq_app prfax
+R3268:3276 Top.cl_eq <> cl_K_prop thm
+R3268:3276 Top.cl_eq <> cl_K_prop thm
+def 3302:3305 <> cl_L
+R3311:3314 Top.cl <> ::x_'o'_x not
+R3324:3324 Top.cl <> ::x_'o'_x not
+R3310:3310 Top.cl_eq <> D syndef
+R3320:3322 Top.cl <> ::x_'o'_x not
+R3316:3318 Top.cl <> ::x_'o'_x not
+R3315:3315 Top.cl_eq <> B syndef
+R3319:3319 Top.cl_eq <> D syndef
+R3323:3323 Top.cl_eq <> D syndef
+syndef 3341:3341 <> L
+R3346:3349 Top.cl_eq <> cl_L def
+prf 3362:3370 <> cl_L_prop
+R3375:3379 Top.cl_eq cl_equivalence ::x_'~cl'_x not
+R3374:3374 Top.cl_eq <> L syndef
+R3381:3383 Top.cl <> ::x_'o'_x not
+R3380:3380 Top.cl_eq <> L syndef
+R3384:3384 Top.cl_eq <> L syndef
+R3415:3428 Top.cl_eq cl_equivalence <> sec
+R3457:3461 Top.cl_eq <> cl_eq ind
+not 3441:3441 <> ::x_'~cl'_x

@@ -24,6 +24,9 @@ Section cl_normal.
   Proof.
     intros H v Hv.
     apply cl_beta_var_1_inv in Hv.
+    destruct Hv.
+    destruct H0.
+    apply (H(x0)).
   Admitted.
 
   Fact cl_var_x_y_normal p x y : cl_normal x -> cl_normal y -> cl_normal (µ p o x o y).

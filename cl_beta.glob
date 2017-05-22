@@ -1,0 +1,234 @@
+DIGEST 55aa8863c8ac032af80d58e65f7dbddd
+FTop.cl_beta
+R536:539 Coq.Bool.Bool <> <> lib
+R558:561 Top.tacs <> <> lib
+R563:565 Top.rel <> <> lib
+R567:572 Top.square <> <> lib
+R574:575 Top.cl <> <> lib
+R577:581 Top.cl_eq <> <> lib
+R583:594 Top.cl_confluent <> <> lib
+ind 734:740 <> cl_beta
+constr 777:788 <> in_cl_beta_I
+constr 839:850 <> in_cl_beta_K
+constr 899:910 <> in_cl_beta_S
+constr 971:984 <> in_cl_beta_lft
+constr 1091:1103 <> in_cl_beta_rt
+R750:753 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R760:763 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R754:759 Top.cl <> clterm ind
+R744:749 Top.cl <> clterm ind
+R1231:1237 Top.cl_beta <> cl_beta ind
+R813:827 Top.cl_beta <> ::x_'-b->'_x not
+R809:811 Top.cl <> ::x_'o'_x not
+R808:808 Top.cl <> I syndef
+R812:812 Top.cl_beta <> x var
+R828:828 Top.cl_beta <> x var
+R879:889 Top.cl_beta <> ::x_'-b->'_x not
+R875:877 Top.cl <> ::x_'o'_x not
+R871:873 Top.cl <> ::x_'o'_x not
+R870:870 Top.cl <> K syndef
+R874:874 Top.cl_beta <> x var
+R878:878 Top.cl_beta <> y var
+R890:890 Top.cl_beta <> x var
+R943:949 Top.cl_beta <> ::x_'-b->'_x not
+R939:941 Top.cl <> ::x_'o'_x not
+R935:937 Top.cl <> ::x_'o'_x not
+R931:933 Top.cl <> ::x_'o'_x not
+R930:930 Top.cl <> S syndef
+R934:934 Top.cl_beta <> x var
+R938:938 Top.cl_beta <> y var
+R942:942 Top.cl_beta <> z var
+R955:958 Top.cl <> ::x_'o'_x not
+R964:964 Top.cl <> ::x_'o'_x not
+R951:953 Top.cl <> ::x_'o'_x not
+R950:950 Top.cl_beta <> x var
+R954:954 Top.cl_beta <> z var
+R960:962 Top.cl <> ::x_'o'_x not
+R959:959 Top.cl_beta <> y var
+R963:963 Top.cl_beta <> z var
+R1023:1068 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1074:1079 Top.cl_beta <> ::x_'-b->'_x not
+R1070:1072 Top.cl <> ::x_'o'_x not
+R1069:1069 Top.cl_beta <> f var
+R1073:1073 Top.cl_beta <> a var
+R1081:1083 Top.cl <> ::x_'o'_x not
+R1080:1080 Top.cl_beta <> g var
+R1084:1084 Top.cl_beta <> a var
+R1012:1021 Top.cl_beta <> ::x_'-b->'_x not
+R1011:1011 Top.cl_beta <> f var
+R1022:1022 Top.cl_beta <> g var
+R1147:1191 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1197:1202 Top.cl_beta <> ::x_'-b->'_x not
+R1193:1195 Top.cl <> ::x_'o'_x not
+R1192:1192 Top.cl_beta <> f var
+R1196:1196 Top.cl_beta <> a var
+R1204:1206 Top.cl <> ::x_'o'_x not
+R1203:1203 Top.cl_beta <> f var
+R1207:1207 Top.cl_beta <> b var
+R1136:1145 Top.cl_beta <> ::x_'-b->'_x not
+R1135:1135 Top.cl_beta <> a var
+R1146:1146 Top.cl_beta <> b var
+R1231:1237 Top.cl_beta <> cl_beta ind
+not 1216:1216 <> ::x_'-b->'_x
+R1272:1274 Top.rel <> crt ind
+R1276:1282 Top.cl_beta <> cl_beta ind
+not 1255:1255 <> ::x_'-b>>'_x
+R1328:1331 Top.rel <> crst ind
+R1333:1339 Top.cl_beta <> cl_beta ind
+not 1313:1313 <> ::x_'~b'_x
+prf 1367:1384 <> cl_beta_rt_beta_eq
+R1400:1403 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1405:1408 Top.cl_beta <> ::x_'~b'_x not
+R1404:1404 Top.cl_beta <> f var
+R1409:1409 Top.cl_beta <> g var
+R1393:1398 Top.cl_beta <> ::x_'-b>>'_x not
+R1392:1392 Top.cl_beta <> f var
+R1399:1399 Top.cl_beta <> g var
+R1425:1436 Top.rel <> crt_inc_crst prfax
+R1425:1436 Top.rel <> crt_inc_crst prfax
+prf 1452:1464 <> cl_beta_cl_eq
+R1480:1483 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1485:1489 Top.cl_eq <> ::x_'~cl'_x not
+R1484:1484 Top.cl_beta <> f var
+R1490:1490 Top.cl_beta <> g var
+R1473:1478 Top.cl_beta <> ::x_'-b->'_x not
+R1472:1472 Top.cl_beta <> f var
+R1479:1479 Top.cl_beta <> g var
+prf 1548:1563 <> cl_beta_rt_cl_eq
+R1579:1582 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1584:1588 Top.cl_eq <> ::x_'~cl'_x not
+R1583:1583 Top.cl_beta <> f var
+R1589:1589 Top.cl_beta <> g var
+R1572:1577 Top.cl_beta <> ::x_'-b>>'_x not
+R1571:1571 Top.cl_beta <> f var
+R1578:1578 Top.cl_beta <> g var
+prf 1647:1660 <> cl_beta_rt_app
+R1680:1683 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1692:1695 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1701:1706 Top.cl_beta <> ::x_'-b>>'_x not
+R1697:1699 Top.cl <> ::x_'o'_x not
+R1696:1696 Top.cl_beta <> f var
+R1700:1700 Top.cl_beta <> a var
+R1708:1710 Top.cl <> ::x_'o'_x not
+R1707:1707 Top.cl_beta <> g var
+R1711:1711 Top.cl_beta <> b var
+R1685:1690 Top.cl_beta <> ::x_'-b>>'_x not
+R1684:1684 Top.cl_beta <> a var
+R1691:1691 Top.cl_beta <> b var
+R1673:1678 Top.cl_beta <> ::x_'-b>>'_x not
+R1672:1672 Top.cl_beta <> f var
+R1679:1679 Top.cl_beta <> g var
+R1760:1762 Top.cl <> ::x_'o'_x not
+R1760:1762 Top.cl <> ::x_'o'_x not
+R1878:1880 Top.cl <> ::x_'o'_x not
+R1878:1880 Top.cl <> ::x_'o'_x not
+R2002:2004 Top.cl <> ::x_'o'_x not
+R2002:2004 Top.cl <> ::x_'o'_x not
+prf 2028:2043 <> cl_beta_eq_cl_eq
+R2057:2060 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2062:2066 Top.cl_eq <> ::x_'~cl'_x not
+R2061:2061 Top.cl_beta <> f var
+R2067:2067 Top.cl_beta <> g var
+R2052:2055 Top.cl_beta <> ::x_'~b'_x not
+R2051:2051 Top.cl_beta <> f var
+R2056:2056 Top.cl_beta <> g var
+prf 2127:2140 <> cl_beta_eq_app
+R2158:2161 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2168:2171 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2177:2180 Top.cl_beta <> ::x_'~b'_x not
+R2173:2175 Top.cl <> ::x_'o'_x not
+R2172:2172 Top.cl_beta <> f var
+R2176:2176 Top.cl_beta <> a var
+R2182:2184 Top.cl <> ::x_'o'_x not
+R2181:2181 Top.cl_beta <> g var
+R2185:2185 Top.cl_beta <> b var
+R2163:2166 Top.cl_beta <> ::x_'~b'_x not
+R2162:2162 Top.cl_beta <> a var
+R2167:2167 Top.cl_beta <> b var
+R2153:2156 Top.cl_beta <> ::x_'~b'_x not
+R2152:2152 Top.cl_beta <> f var
+R2157:2157 Top.cl_beta <> g var
+prf 2211:2229 <> cl_beta_equiv_cl_eq
+R2243:2247 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R2238:2241 Top.cl_beta <> ::x_'~b'_x not
+R2237:2237 Top.cl_beta <> f var
+R2242:2242 Top.cl_beta <> g var
+R2249:2253 Top.cl_eq <> ::x_'~cl'_x not
+R2248:2248 Top.cl_beta <> f var
+R2254:2254 Top.cl_beta <> g var
+R2281:2296 Top.cl_beta <> cl_beta_eq_cl_eq prfax
+R2281:2296 Top.cl_beta <> cl_beta_eq_cl_eq prfax
+R2439:2444 Top.cl_confluent <> cl_rho ind
+not 2422:2422 <> ::x_'-r->'_x
+R2498:2500 Top.rel <> crt ind
+R2502:2507 Top.cl_confluent <> cl_rho ind
+not 2481:2481 <> ::x_'-r>>'_x
+prf 2535:2545 <> cl_beta_rho
+R2561:2564 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2566:2571 Top.cl_beta <> ::x_'-r->'_x not
+R2565:2565 Top.cl_beta <> f var
+R2572:2572 Top.cl_beta <> g var
+R2554:2559 Top.cl_beta <> ::x_'-b->'_x not
+R2553:2553 Top.cl_beta <> f var
+R2560:2560 Top.cl_beta <> g var
+prf 2613:2626 <> cl_rho_beta_rt
+R2642:2645 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2647:2652 Top.cl_beta <> ::x_'-b>>'_x not
+R2646:2646 Top.cl_beta <> f var
+R2653:2653 Top.cl_beta <> g var
+R2635:2640 Top.cl_beta <> ::x_'-r->'_x not
+R2634:2634 Top.cl_beta <> f var
+R2641:2641 Top.cl_beta <> g var
+prf 2695:2714 <> cl_rho_rt_beta_rt_eq
+R2730:2734 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R2723:2728 Top.cl_beta <> ::x_'-r>>'_x not
+R2722:2722 Top.cl_beta <> f var
+R2729:2729 Top.cl_beta <> g var
+R2736:2741 Top.cl_beta <> ::x_'-b>>'_x not
+R2735:2735 Top.cl_beta <> f var
+R2742:2742 Top.cl_beta <> g var
+prf 2862:2873 <> cl_rho_cl_eq
+R2889:2892 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2894:2898 Top.cl_eq <> ::x_'~cl'_x not
+R2893:2893 Top.cl_beta <> f var
+R2899:2899 Top.cl_beta <> g var
+R2882:2887 Top.cl_beta <> ::x_'-r->'_x not
+R2881:2881 Top.cl_beta <> f var
+R2888:2888 Top.cl_beta <> g var
+R2924:2939 Top.cl_beta <> cl_beta_rt_cl_eq prfax
+R2942:2955 Top.cl_beta <> cl_rho_beta_rt prfax
+R2924:2939 Top.cl_beta <> cl_beta_rt_cl_eq prfax
+R2942:2955 Top.cl_beta <> cl_rho_beta_rt prfax
+prf 3089:3105 <> cl_beta_confluent
+R3109:3117 Top.square <> confluent def
+R3119:3125 Top.cl_beta <> cl_beta ind
+R3169:3188 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3169:3188 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3169:3188 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3169:3188 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3169:3188 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3219:3234 Top.cl_confluent <> cl_rho_confluent thm
+R3219:3234 Top.cl_confluent <> cl_rho_confluent thm
+R3289:3308 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3289:3308 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3289:3308 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3289:3308 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+R3289:3308 Top.cl_beta <> cl_rho_rt_beta_rt_eq prfax
+prf 3328:3337 <> cl_beta_cr
+R3351:3355 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R3346:3349 Top.cl_beta <> ::x_'~b'_x not
+R3345:3345 Top.cl_beta <> f var
+R3350:3350 Top.cl_beta <> g var
+R3356:3362 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R3364:3365 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R3374:3377 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R3367:3372 Top.cl_beta <> ::x_'-b>>'_x not
+R3366:3366 Top.cl_beta <> f var
+R3373:3373 Top.cl_beta <> h var
+R3379:3384 Top.cl_beta <> ::x_'-b>>'_x not
+R3378:3378 Top.cl_beta <> g var
+R3385:3385 Top.cl_beta <> h var
+R3403:3425 Top.square <> confluent_church_rosser thm
+R3428:3444 Top.cl_beta <> cl_beta_confluent thm
+R3403:3425 Top.square <> confluent_church_rosser thm
+R3428:3444 Top.cl_beta <> cl_beta_confluent thm

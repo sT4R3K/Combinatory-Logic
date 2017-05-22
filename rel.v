@@ -93,12 +93,16 @@ Section usual_closures.
     intros H x y. 
     induction 1 as [ | | x y ].
     constructor 1; auto.
-  Admitted.
+    constructor 2; auto.
+    constructor 3 with y; assumption.
+  Qed.
 
   Fact crt_idem R : crt (crt R) inc2 crt R.
   Proof.
     induction 1 as [ | | x y ]; auto.
-  Admitted.
+    constructor 2.
+    constructor 3 with y; assumption.
+  Qed.
   
   Lemma crt_closure R T : R inc2 crt T <-> crt R inc2 crt T.
   Proof.
@@ -110,19 +114,37 @@ Section usual_closures.
   
   Fact crst_inc R : R inc2 crst R.
   Proof.
-  Admitted.
+    constructor 1.
+    assumption.
+  Qed.
   
   Fact crst_mono R T : R inc2 T -> crst R inc2 crst T.
   Proof.
-  Admitted.
+    intros H x y.
+    induction 1.
+    constructor 1. auto.
+    constructor 2; auto.
+    constructor 3; auto.
+    constructor 4 with y; assumption.
+  Qed.
   
   Fact crst_idem R : crst (crst R) inc2 crst R.
   Proof.
-  Admitted.
+    induction 1; auto.
+    constructor 2.
+    constructor 3; assumption.
+    constructor 4 with y; assumption.
+  Qed.
   
   Lemma crst_closure R T : R inc2 crst T <-> crst R inc2 crst T.
   Proof.
-  Admitted.
+    split; intros H.
+    apply inc2_trans with (2 := @crst_idem T).
+    apply crst_mono.
+    apply H.
+    apply inc2_trans with (2 := H).
+    apply crst_inc.
+  Qed.
   
   Fact cs_inc R : R inc2 cs R.
   Proof. constructor 1; auto. Qed.
@@ -144,12 +166,20 @@ Section usual_closures.
   Fact crt_inc_crst R x y : x [R*> y -> x ~[R] y.
   Proof.
     induction 1 as [ | | ? y ].
-  Admitted.
+    constructor 1.
+    assumption.
+    constructor 2.
+    constructor 4 with y; assumption.
+  Qed.
   
   Fact cs_inc_crst R : cs R inc2 crst R.
   Proof.
     induction 1.
-  Admitted.
+    constructor 1.
+    assumption.
+    constructor 3.
+    assumption.
+  Qed.
   
   Lemma crt_sym R : cs R inc2 R -> cs (crt R) inc2 crt R.
   Proof.

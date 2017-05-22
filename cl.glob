@@ -1,0 +1,101 @@
+DIGEST 4183acb3c46d86284d7d386ada1bdd30
+FTop.cl
+R536:540 Coq.Arith.Arith <> <> lib
+R542:546 Coq.omega.Omega <> <> lib
+ax 585:587 <> Var
+ind 663:668 <> clterm
+constr 683:686 <> cl_S
+constr 702:705 <> cl_K
+constr 721:724 <> cl_I
+constr 740:745 <> cl_app
+constr 779:784 <> cl_var
+R692:697 Top.cl <> clterm ind
+R711:716 Top.cl <> clterm ind
+R730:735 Top.cl <> clterm ind
+R755:758 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R765:768 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R769:774 Top.cl <> clterm ind
+R759:764 Top.cl <> clterm ind
+R749:754 Top.cl <> clterm ind
+R791:794 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R795:800 Top.cl <> clterm ind
+R788:790 Top.cl <> Var defax
+R853:858 Top.cl <> cl_app constr
+not 844:844 <> ::x_'o'_x
+R921:926 Top.cl <> cl_var constr
+not 905:905 <> ::'µ'_x
+def 987:991 <> cl_Kn
+R1006:1006 Top.cl <> n var
+R1026:1029 Top.cl <> cl_K constr
+R1037:1037 Coq.Init.Datatypes <> S constr
+R1048:1050 Top.cl <> ::x_'o'_x not
+R1044:1047 Top.cl <> cl_K constr
+R1051:1055 Top.cl <> cl_Kn def
+R1057:1057 Top.cl <> n var
+def 1118:1124 <> cl_size
+R1139:1139 Top.cl <> f var
+R1153:1155 Top.cl <> ::x_'o'_x not
+R1174:1176 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R1162:1164 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R1165:1171 Top.cl <> cl_size def
+R1173:1173 Top.cl <> f var
+R1177:1183 Top.cl <> cl_size def
+syndef 1346:1346 <> K
+R1351:1354 Top.cl <> cl_K constr
+syndef 1366:1366 <> S
+R1371:1374 Top.cl <> cl_S constr
+syndef 1386:1386 <> I
+R1391:1394 Top.cl <> cl_I constr
+prf 1446:1455 <> cl_var_inj
+R1474:1477 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1479:1481 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1478:1478 Top.cl <> p var
+R1482:1482 Top.cl <> q var
+R1467:1469 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1463:1465 Top.cl <> ::'µ'_x not
+R1466:1466 Top.cl <> p var
+R1470:1472 Top.cl <> ::'µ'_x not
+R1473:1473 Top.cl <> q var
+prf 1526:1535 <> cl_app_inj
+R1560:1563 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1569:1572 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1565:1567 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1564:1564 Top.cl <> f var
+R1568:1568 Top.cl <> g var
+R1574:1576 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1573:1573 Top.cl <> a var
+R1577:1577 Top.cl <> b var
+R1552:1554 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1548:1550 Top.cl <> ::x_'o'_x not
+R1547:1547 Top.cl <> f var
+R1551:1551 Top.cl <> a var
+R1556:1558 Top.cl <> ::x_'o'_x not
+R1555:1555 Top.cl <> g var
+R1559:1559 Top.cl <> b var
+prf 1644:1653 <> cl_Kn_size
+R1676:1678 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1659:1665 Top.cl <> cl_size def
+R1668:1672 Top.cl <> cl_Kn def
+R1674:1674 Top.cl <> i var
+R1682:1682 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R1680:1680 Coq.Init.Peano <> :nat_scope:x_'*'_x not
+R1681:1681 Top.cl <> i var
+prf 1785:1793 <> cl_Kn_inj
+R1818:1821 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1823:1825 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1822:1822 Top.cl <> i var
+R1826:1826 Top.cl <> j var
+R1808:1810 Coq.Init.Logic <> :type_scope:x_'='_x not
+R1801:1805 Top.cl <> cl_Kn def
+R1807:1807 Top.cl <> i var
+R1811:1815 Top.cl <> cl_Kn def
+R1817:1817 Top.cl <> j var
+R1875:1881 Top.cl <> cl_size def
+R1856:1862 Coq.Init.Logic <> f_equal thm
+R1875:1881 Top.cl <> cl_size def
+R1856:1862 Coq.Init.Logic <> f_equal thm
+R1905:1914 Top.cl <> cl_Kn_size thm
+R1905:1914 Top.cl <> cl_Kn_size thm
+R1905:1914 Top.cl <> cl_Kn_size thm
+R1905:1914 Top.cl <> cl_Kn_size thm
+R1905:1914 Top.cl <> cl_Kn_size thm

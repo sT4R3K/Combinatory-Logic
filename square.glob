@@ -1,0 +1,200 @@
+DIGEST 4de1f51dbb6881968e705259d271c33a
+FTop.square
+R536:539 Top.tacs <> <> lib
+R541:543 Top.rel <> <> lib
+def 583:588 <> square
+R598:601 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R603:606 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R602:602 Top.square <> X var
+R597:597 Top.square <> X var
+R635:638 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R644:647 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R648:654 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R656:657 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R663:666 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R658:658 Top.square <> R var
+R662:662 Top.square <> g var
+R660:660 Top.square <> a var
+R667:667 Top.square <> R var
+R671:671 Top.square <> g var
+R669:669 Top.square <> b var
+R639:639 Top.square <> R var
+R643:643 Top.square <> b var
+R641:641 Top.square <> f var
+R630:630 Top.square <> R var
+R634:634 Top.square <> a var
+R632:632 Top.square <> f var
+sec 683:692 <> square_crt
+var 709:709 square_crt X
+var 720:720 square_crt R
+var 741:742 square_crt HR
+R725:728 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R730:733 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R729:729 Top.square <> X var
+R724:724 Top.square <> X var
+R747:752 Top.square <> square def
+R756:756 Top.square <> R var
+R754:754 Top.square <> X var
+var 767:777 square_crt ri_square_1
+R810:821 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R832:844 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R845:851 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R853:854 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R865:886 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R856:857 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R859:859 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R861:863 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R858:858 Top.square <> square_crt.R var
+R860:860 Top.square <> n var
+R855:855 Top.square <> a var
+R864:864 Top.square <> g var
+R888:889 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R891:891 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R893:895 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R890:890 Top.square <> square_crt.R var
+R887:887 Top.square <> b var
+R896:896 Top.square <> g var
+R823:824 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R826:826 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R828:830 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R825:825 Top.square <> square_crt.R var
+R827:827 Top.square <> n var
+R822:822 Top.square <> f var
+R831:831 Top.square <> b var
+R801:802 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R804:804 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R806:808 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R803:803 Top.square <> square_crt.R var
+R800:800 Top.square <> f var
+R809:809 Top.square <> a var
+R1065:1076 Top.rel <> rel_iter_one thm
+R1065:1076 Top.rel <> rel_iter_one thm
+R1099:1100 Top.square <> square_crt.HR var
+R1099:1100 Top.square <> square_crt.HR var
+R1139:1150 Top.rel <> rel_iter_one thm
+R1139:1150 Top.rel <> rel_iter_one thm
+R1139:1150 Top.rel <> rel_iter_one thm
+prf 1273:1287 <> rel_iter_square
+R1322:1334 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1345:1357 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R1358:1364 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1366:1367 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R1378:1399 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R1369:1370 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1372:1372 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1374:1376 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1371:1371 Top.square <> square_crt.R var
+R1373:1373 Top.square <> m var
+R1368:1368 Top.square <> a var
+R1377:1377 Top.square <> g var
+R1401:1402 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1404:1404 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1406:1408 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1403:1403 Top.square <> square_crt.R var
+R1405:1405 Top.square <> n var
+R1400:1400 Top.square <> b var
+R1409:1409 Top.square <> g var
+R1336:1337 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1339:1339 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1341:1343 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1338:1338 Top.square <> square_crt.R var
+R1340:1340 Top.square <> m var
+R1335:1335 Top.square <> f var
+R1344:1344 Top.square <> b var
+R1313:1314 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1316:1316 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1318:1320 Top.rel <> ::x_'['_x_','_x_'>>'_x not
+R1315:1315 Top.square <> square_crt.R var
+R1317:1317 Top.square <> n var
+R1312:1312 Top.square <> f var
+R1321:1321 Top.square <> a var
+R1584:1595 Top.rel <> rel_iter_one thm
+R1584:1595 Top.rel <> rel_iter_one thm
+R1584:1595 Top.rel <> rel_iter_one thm
+R1618:1628 Top.square <> square_crt.ri_square_1 var
+R1618:1628 Top.square <> square_crt.ri_square_1 var
+R1781:1792 Top.rel <> rel_iter_one thm
+R1781:1792 Top.rel <> rel_iter_one thm
+prf 1821:1830 <> square_crt
+R1834:1839 Top.square <> square def
+R1842:1844 Top.rel <> crt ind
+R1846:1846 Top.square <> square_crt.R var
+R1894:1908 Top.rel <> rel_iter_eq_crt thm
+R1894:1908 Top.rel <> rel_iter_eq_crt thm
+R1894:1908 Top.rel <> rel_iter_eq_crt thm
+R1894:1908 Top.rel <> rel_iter_eq_crt thm
+R1894:1908 Top.rel <> rel_iter_eq_crt thm
+R1956:1970 Top.square <> rel_iter_square thm
+R1956:1970 Top.square <> rel_iter_square thm
+R2045:2054 Top.square square_crt <> sec
+def 2069:2077 <> confluent
+R2087:2090 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2092:2095 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2091:2091 Top.square <> X var
+R2086:2086 Top.square <> X var
+R2105:2110 Top.square <> square def
+R2113:2115 Top.rel <> crt ind
+R2117:2117 Top.square <> R var
+def 2132:2144 <> church_rosser
+R2154:2157 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2159:2162 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2158:2158 Top.square <> X var
+R2153:2153 Top.square <> X var
+R2199:2203 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R2189:2192 Top.rel <> crst ind
+R2198:2198 Top.square <> b var
+R2196:2196 Top.square <> a var
+R2194:2194 Top.square <> R var
+R2204:2210 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R2212:2213 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R2223:2226 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R2214:2216 Top.rel <> crt ind
+R2222:2222 Top.square <> f var
+R2220:2220 Top.square <> a var
+R2218:2218 Top.square <> R var
+R2227:2229 Top.rel <> crt ind
+R2235:2235 Top.square <> f var
+R2233:2233 Top.square <> b var
+R2231:2231 Top.square <> R var
+sec 2247:2269 <> confluent_church_rosser
+var 2285:2285 confluent_church_rosser X
+var 2296:2296 confluent_church_rosser R
+var 2317:2318 confluent_church_rosser HR
+R2301:2304 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2306:2309 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R2305:2305 Top.square <> X var
+R2300:2300 Top.square <> X var
+R2323:2331 Top.square <> confluent def
+R2335:2335 Top.square <> R var
+R2333:2333 Top.square <> X var
+prf 2349:2371 <> confluent_church_rosser
+R2375:2387 Top.square <> church_rosser def
+R2389:2389 Top.square <> confluent_church_rosser.R var
+R2654:2655 Top.square <> confluent_church_rosser.HR var
+R2654:2655 Top.square <> confluent_church_rosser.HR var
+R2832:2843 Top.rel <> crt_inc_crst prfax
+R2832:2843 Top.rel <> crt_inc_crst prfax
+R2881:2892 Top.rel <> crt_inc_crst prfax
+R2881:2892 Top.rel <> crt_inc_crst prfax
+R2917:2939 Top.square confluent_church_rosser <> sec
+sec 2951:2973 <> church_rosser_confluent
+var 2989:2989 church_rosser_confluent X
+var 3000:3000 church_rosser_confluent R
+var 3021:3022 church_rosser_confluent HR
+R3005:3008 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3010:3013 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R3009:3009 Top.square <> X var
+R3004:3004 Top.square <> X var
+R3027:3039 Top.square <> church_rosser def
+R3043:3043 Top.square <> R var
+R3041:3041 Top.square <> X var
+prf 3057:3079 <> church_rosser_confluent
+R3083:3091 Top.square <> confluent def
+R3093:3093 Top.square <> church_rosser_confluent.R var
+R3139:3140 Top.square <> church_rosser_confluent.HR var
+R3139:3140 Top.square <> church_rosser_confluent.HR var
+R3199:3210 Top.rel <> crt_inc_crst prfax
+R3199:3210 Top.rel <> crt_inc_crst prfax
+R3229:3240 Top.rel <> crt_inc_crst prfax
+R3229:3240 Top.rel <> crt_inc_crst prfax
+R3263:3285 Top.square church_rosser_confluent <> sec

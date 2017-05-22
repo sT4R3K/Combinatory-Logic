@@ -77,6 +77,7 @@ Section cl_confluent.
                 | (x & y & z & k & H & ? & ? & ?) ] ] ] ]; subst.
     apply cl_app_inj in H; destruct H; subst.
     right; left; auto.
+
   Admitted.
 
   Fact cl_rho_I_app_inv a v : 
@@ -92,6 +93,12 @@ Section cl_confluent.
                   | (x1 & y1 & G1 & G2) ] ] ].
     apply cl_rho_I_inv in G1; subst.
     left; exists b1; auto.
+(*
+    destruct H.
+    right; auto.
+
+    left.
+    split.*)
   Admitted.
 
   Fact cl_rho_K_app_inv a v : K o a -r-> v -> exists b, v = K o b /\ a -r-> b.
@@ -107,6 +114,10 @@ Section cl_confluent.
 
   Fact cl_rho_S_app_inv a v : S o a -r-> v -> exists b, v = S o b /\ a -r-> b.
   Proof.
+    (**)
+    intros.
+    exists a.
+    split.
   Admitted.
 
   Fact cl_rho_S_app2_inv a b v : S o a o b -r-> v -> exists x y, v = S o x o y /\ a -r-> x /\ b -r-> y.
