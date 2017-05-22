@@ -53,7 +53,7 @@ Section cl_equivalence.
   Fact cl_eq_refl f g : f = g -> f ~cl g.
   Proof.
     intro H.
-    destruct H.
+    rewrite H.
     constructor 4.
   Qed.
   
@@ -63,74 +63,52 @@ Section cl_equivalence.
   
   Fact cl_eq_app x y a b : x ~cl y -> a ~cl b -> x o a ~cl y o b.
   Proof.
-    induction 2.
-    apply (cl_eq_refl)in H.
-    apply cl_eq_trans with (1 := in_cl_eq_I _).
-
-    apply in_cl_eq_I with (1 := in_cl_eq_3 _ _ _).
-
-
-    induction 1.
-    intro H.
-    apply (in_cl_eq_4 (x)) in H.
+    intros H0 H1.
+    induction H0.
     apply cl_eq_trans with (x o a).
-admit. exact H.
-
-    intro H.
-    apply (in_cl_eq_4 (x)) in H.
-    apply in_cl_eq_1.
-    apply cl_eq_trans with (x o b).
-    apply in_cl_eq_0.
-    apply cl_eq_trans with (x o b).
-    destruct H.
-    apply 
-    (*apply in_cl_eq_I with (1 := x o a).*)
-admit.
-    intro H.
-    intros H0 H1.
-    destruct H0.
-    destruct H1.
-
-    apply 
-
-admit.
-admit.
-admit.
-    apply in_cl_eq_3; auto.
-    destruct H1.
-    apply in_cl_eq_I.
-
-
-
-    apply in_cl_eq_2 with a in H1 .
-    apply cl_eq_refl.
-    cut (x o a).
-    destruct H1.
-    destruct H0.
-    apply cl_eq_sym.
-
-    apply cl_eq_sym.
-    apply in_cl_eq_4 with x0.
-    intros.
-
-    simpl.
-    rewrite H0 with cl_eq_sym.
-    destruct H0.
-
+    apply in_cl_eq_3.
+    constructor 1.
     apply in_cl_eq_4.
-
-    intro H.
-    destruct H.
-    apply in_cl_eq_2.
-    intros H0 H1.
-    constructor 7. 
-
-    destruct H0.
-    destruct H1.
-
-
-
-  Admitted.
+    auto.
+    
+    apply cl_eq_trans with (x o a).
+    apply in_cl_eq_3.
+    constructor 2.
+    apply in_cl_eq_4.
+    auto.
+    
+    apply cl_eq_trans with (x o z o (y o z) o a).
+    apply in_cl_eq_3.
+    constructor 3.
+    apply in_cl_eq_4.
+    auto.
+    
+    apply in_cl_eq_4; auto.
+    
+    apply cl_eq_trans with (x o a).
+    apply in_cl_eq_3.
+    apply cl_eq_sym.
+    auto.
+    
+    apply in_cl_eq_4.
+    auto.
+    
+    apply cl_eq_trans with (x o b).
+    apply in_cl_eq_4; auto.
+    apply in_cl_eq_3.
+    apply cl_eq_trans with y; auto.
+    
+    apply cl_eq_trans with (y o z o a).
+    do 2 apply in_cl_eq_3; auto.
+    apply in_cl_eq_4; auto.
+    
+    apply cl_eq_trans with (x o z o a).
+    
+    apply in_cl_eq_3; auto.
+    apply in_cl_eq_4; auto.
+    
+    apply in_cl_eq_4; auto.
+  Qed.
   
   Fact cl_I_prop x : I o x ~cl x.
   Proof.
@@ -169,8 +147,13 @@ admit.
   Fact cl_D_prop x : D o x ~cl x o x.
   Proof.
     unfold cl_D.
-
-  Admitted.
+    apply cl_eq_trans with (I o x o (I o x)).
+    apply cl_S_prop.
+    apply cl_eq_trans with (x o (I o x));
+      try apply in_cl_eq_3;
+      try apply in_cl_eq_4;
+    constructor 1.
+  Qed.
   
   Definition cl_B := S o (K o S) o K.
   
@@ -197,9 +180,16 @@ admit.
   Fact cl_L_prop : L ~cl L o L.
   Proof.
     unfold cl_L.
-    apply cl_eq_trans with (K o S o D).
+    apply cl_eq_trans with ((B o D o D) o (B o D o D));
+      try apply cl_D_prop.
     
-  Admitted.
+    apply cl_eq_trans with (D o (D o (B o D o D)));
+      try apply cl_D_prop.
+    
+    apply cl_eq_trans with (D o (D o (B o D o D))).
+      apply cl_B_prop.
+    constructor 4.
+  Qed.
   
 End cl_equivalence.
 

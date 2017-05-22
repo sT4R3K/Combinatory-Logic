@@ -82,7 +82,17 @@ Qed.
 
 Fact cl_beta_eq_app f g a b : f ~b g -> a ~b b -> f o a ~b g o b.
 Proof.
+    intros H0 H1.
+    apply cl_eq_trans with (g o a).
+    apply cl_beta_eq_cl_eq.
+    apply cl_eq_app.
+
     induction 2.
+    constructor 1.
+    apply cl_beta_cl_eq in H0.
+apply cl_beta_cl_eq in H.
+    constructor 1.
+    apply cl_beta_eq_cl_eq.
 
 (*
   induction 1.
@@ -117,7 +127,7 @@ Proof.
   constructor 1.
   constructor 2.
   constructor 3.
-  apply cl_beta_eq_cl_eq.
+  apply cl_beta_cl_eq.
   
 Admitted.
 
@@ -132,6 +142,7 @@ Proof.
   constructor 1.
   constructor 2.
   constructor 3.
+apply in_cl_beta_lft.
   constructor 4.
 
 Admitted.
