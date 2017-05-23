@@ -44,8 +44,27 @@ Section inversion_lemmas.
                 | [ (x & y & z & H1 & H2)
                 | [ (x & y & z & H1 & H2 & H3)
                   | (x & y & z & H1 & H2 & H3) ] ] ] ].
-    apply cl_app_inj in H; auto.
-  Admitted.
+    
+    apply cl_app_inj in H;
+    destruct H as [H0 H1]; rewrite H0; rewrite H1;
+    do 0 right; left; auto.
+    
+    apply cl_app_inj in H;
+    destruct H as [H0 H1]; rewrite H0; rewrite H1;
+    do 1 right; left; auto.
+    
+    apply cl_app_inj in H1;
+    destruct H1 as [H3 H4]; rewrite H3; rewrite H4;
+    do 2 right; left; exists x, y; split; auto.
+    
+    apply cl_app_inj in H1;
+    destruct H1 as [H4 H5]; rewrite H4; rewrite H5;
+    do 3 right; left; exists y; split; auto.
+    
+    apply cl_app_inj in H1;
+    destruct H1 as [H4 H5]; rewrite H4; rewrite H5;
+    do 4 right; exists z; split; auto.
+  Qed.
 
   Fact cl_beta_var_0_inv p v : µ p -b-> v -> False.
   Proof.
@@ -67,6 +86,9 @@ Section inversion_lemmas.
                 | [ (f & g & H & _)
                 | [ (f & H1 & H2)
                   | (f & H1 & H2) ] ] ] ]; subst; try discriminate H.
+    
+    destruct H2. subst.  rewrite H0; rewrite H1;
+    do 0 right; left; auto.
   Admitted.
   
   Fact cl_beta_var_2_inv p a b v : µ p o a o b -b-> v -> (exists a', v = µ p o a' o b /\ a -b-> a')
@@ -94,12 +116,32 @@ Section inversion_lemmas.
 
   Fact cl_beta_K_1_inv a v : K o a -b-> v -> exists b, v = K o b /\ a -b-> b.
   Proof.
+    intro H.
+    apply cl_beta_inv in H.
+    destruct H as [ H 
+                | [ (y & H)
+                | [ (x & y & z & H & _)
+                | [ (x & y & z & H & _ & _)
+                  | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
   Admitted.
   
   Fact cl_beta_K_2 a b v : K o a o b -b-> v -> v = a 
                                             \/ (exists a', v = K o a' o b /\ a -b-> a')
                                             \/ (exists b', v = K o a o b' /\ b -b-> b').
   Proof.
+    intro H.
+    apply cl_beta_inv in H.
+    destruct H as [ H 
+                | [ (y & H)
+                | [ (x & y & z & H & _)
+                | [ (x & y & z & H & _ & _)
+                  | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
+    left.
+  (*autorewrite with (v = a) in H.*)
+    rewrite -> H.
+apply in_cl_beta_K.
+    apply in_cl_beta_K in H.
+    rewrite <- H.
   Admitted.
   
   Fact cl_beta_S_0_inv v : S -b-> v -> False.
@@ -115,19 +157,40 @@ Section inversion_lemmas.
 
   Fact cl_beta_S_1_inv a v : S o a -b-> v -> exists b, v = S o b /\ a -b-> b.
   Proof.
+    intros H.
+    apply cl_beta_inv in H.
+  destruct H as [ H 
+                | [ (y & H)
+                | [ (x & y & z & H & _)
+                | [ (x & y & z & H & _ & _)
+                  | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
   Admitted.
 
   Fact cl_beta_S_2_inv a b v :  S o a o b -b-> v
                          -> exists d, (v = S o d o b /\ a -b-> d)
                                    \/ (v = S o a o d /\ b -b-> d).
   Proof.
+    intro H.
+    apply cl_beta_inv in H.
+    destruct H as [ H 
+                | [ (y & H)
+                | [ (x & y & z & H & _)
+                | [ (x & y & z & H & _ & _)
+                  | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
+    exists a.
+    left.
+    split.
   Admitted.
   
   Fact cl_beta_I_0_inv v : I -b-> v -> False.
   Proof.
-(*
-    intros H0.
-    apply (H0 (v)).*)
-  Admitted.
+    intros H.
+    apply cl_beta_inv in H.
+    destruct H as [ H 
+                | [ (y & H)
+                | [ (x & y & z & H & _)
+                | [ (x & y & z & H & _ & _)
+                  | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
+  Qed.
 
 End inversion_lemmas.

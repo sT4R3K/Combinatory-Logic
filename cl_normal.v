@@ -24,30 +24,48 @@ Section cl_normal.
   Proof.
     intros H v Hv.
     apply cl_beta_var_1_inv in Hv.
-    destruct Hv.
+    destruct Hv as [ x0 H0 ].
     destruct H0.
-    apply (H(x0)).
-  Admitted.
+    apply H with x0; auto.
+  Qed.
 
   Fact cl_var_x_y_normal p x y : cl_normal x -> cl_normal y -> cl_normal (µ p o x o y).
   Proof.
     intros Hx Hy v Hv.
     apply cl_beta_var_2_inv in Hv.
-  Admitted.
+    destruct Hv as [H0 | H0];
+      destruct H0 as [x1 H1];
+      destruct H1 as [H2].
+    apply Hx with x1; auto.
+    apply Hy with x1; auto.
+  Qed.
 
   Fact cl_K_x_normal x : cl_normal x -> cl_normal (K o x).
   Proof.
-  Admitted.
+    intros Hx v Hv.
+    apply cl_beta_K_1_inv in Hv.
+    destruct Hv as [x0 H0]; destruct H0.
+    apply Hx with x0; auto.
+  Qed.
   
   Fact cl_S_x_normal x : cl_normal x -> cl_normal (S o x).
   Proof.
-  Admitted.
+    intros Hx v Hv.
+    apply cl_beta_S_1_inv in Hv.
+    destruct Hv as [x0 H0]; destruct H0.
+    apply Hx with x0; auto.
+  Qed.
   
   Fact cl_S_x_y_normal x y : cl_normal x -> cl_normal y -> cl_normal (S o x o y).
   Proof.
     intros Hx Hy v Hv.
     apply cl_beta_S_2_inv in Hv.
-  Admitted.
+    destruct Hv as [x0 H0]; destruct H0 as [H1 | H1].
+    apply Hx with x0; auto.
+    destruct H1; auto.
+    apply Hy with x0; auto.
+    destruct H1; auto.
+  Qed.
 
   Fact cl_normal_lft x y : cl_normal (x o y) -> cl_normal x.
   Proof.
@@ -93,7 +111,8 @@ Qed.
   
 Fact cl_SKI_neq_I : ~ S o K o I ~cl I.
 Proof.
-Admitted.
+  apply cl_neq_normal; auto; discriminate.
+Qed.
   
 (**  Hence ~cl is not an extensional congruence:
   

@@ -82,54 +82,41 @@ Qed.
 
 Fact cl_beta_eq_app f g a b : f ~b g -> a ~b b -> f o a ~b g o b.
 Proof.
-    intros H0 H1.
-    apply cl_eq_trans with (g o a).
-    apply cl_beta_eq_cl_eq.
-    apply cl_eq_app.
-
-    induction 2.
-    constructor 1.
-    apply cl_beta_cl_eq in H0.
-apply cl_beta_cl_eq in H.
-    constructor 1.
-    apply cl_beta_eq_cl_eq.
-
-(*
-  induction 1.
-  intro H0.
-  apply cl_beta_cl_eq in H.
-  apply cl_beta_eq_cl_eq in H0.
-  constructor 1.
-admit.
-    
-    intro H1.
-    constructor 1; constructor 5.
-admit.
-    intro H2.
-*)
-  constructor 1.
-admit.
-  intro H1.
-  constructor 1.
-admit.
-  intro H2.
-admit.
-  intro H3.
-admit.
-
-Admitted.
+  intros H0 H1.
+  constructor 4 with (f o b).
+  induction H1.
+  constructor 1; constructor 5; auto.
+  constructor 2.
+  constructor 4 with (f o y).
+  constructor 2.
+  constructor 3; auto.
+  constructor 4 with (f o y); auto.
+  
+  induction H0 as [ | | | f h g ].
+  constructor 1; constructor 4; auto.
+  constructor 2.
+  constructor 3; auto.
+  constructor 4 with (h o b); auto.
+Qed.
 
 Fact cl_beta_equiv_cl_eq f g : f ~b g <-> f ~cl g.
 Proof.
   split.
   apply cl_beta_eq_cl_eq.
-  induction 1 as [ | | | | x y | | | ]; constructor 1.
-  constructor 1.
+  induction 1 as [ | | | | x y | | | ].
+
+  constructor 1; constructor 1.
+  constructor 1; constructor 2.
+  constructor 1; constructor 3.
   constructor 2.
-  constructor 3.
-  apply cl_beta_cl_eq.
-  
-Admitted.
+  constructor 3; auto.
+  constructor 4 with y; auto.
+  apply cl_beta_eq_app; auto.
+  constructor 2.
+  apply cl_beta_eq_app. 
+  constructor 2.
+  auto.
+Qed.
 
 (* See the definition of cl_rho in file cl_confluent *)
 
@@ -138,36 +125,42 @@ Local Notation "x '-r>>' y" := (crt cl_rho x y) (at level 70).
 
 Fact cl_beta_rho f g : f -b-> g -> f -r-> g.
 Proof.
-  induction 1.
+  intros H.
+
+  induction H.
   constructor 1.
   constructor 2.
   constructor 3.
-apply in_cl_beta_lft.
+  constructor 5; auto.
   constructor 4.
-
-Admitted.
+  constructor 5; auto.
+  constructor 4.
+Qed.
 
 Fact cl_rho_beta_rt f g : f -r-> g -> f -b>> g.
 Proof.
-  induction 1; constructor 1.
-  constructor 1.
+  induction 1.
+  constructor 1; constructor 1.
+  constructor 1; constructor 2.
+  constructor 1; constructor 3.
   constructor 2.
-  constructor 3.
-admit.
-  constructor 4.
-Admitted.
+  apply cl_beta_rt_app; auto.
+Qed.
 
 Lemma cl_rho_rt_beta_rt_eq f g : f -r>> g <-> f -b>> g.
 Proof.
   split.
     
-  induction 1 as [ | | x y ]; apply cl_rho_beta_rt; auto.
+  induction 1 as [ | | x y ].
+  apply cl_rho_beta_rt. auto.
+  constructor 2.
+  constructor 3 with y; auto.
 
-  constructor 4.
-admit.
-
-  induction 1 as [ | | x y ]; apply cl_rho_beta_rt. constructor 1.
-Admitted.
+  induction 1 as [ | | x y ].
+  constructor 1; apply cl_beta_rho; auto.
+  constructor 2.
+  constructor 3 with y; auto.
+Qed.
 
 Corollary cl_rho_cl_eq f g : f -r-> g -> f ~cl g.
 Proof.

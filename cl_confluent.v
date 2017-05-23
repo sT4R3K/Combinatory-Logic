@@ -76,9 +76,17 @@ Section cl_confluent.
                 | [ H
                 | (x & y & z & k & H & ? & ? & ?) ] ] ] ]; subst.
     apply cl_app_inj in H; destruct H; subst.
-    right; left; auto.
-
-  Admitted.
+    
+    do 0 right; auto.
+    
+    inversion H; do 2 right; auto.
+    
+    inversion H; do 3 right; exists x, y; auto.
+    
+    left; exists f, a; split; auto; split; constructor.
+    
+    inversion H; left; exists y, k; split; auto.
+  Qed.
 
   Fact cl_rho_I_app_inv a v : 
          I o a -r-> v 
@@ -93,13 +101,15 @@ Section cl_confluent.
                   | (x1 & y1 & G1 & G2) ] ] ].
     apply cl_rho_I_inv in G1; subst.
     left; exists b1; auto.
-(*
-    destruct H.
-    right; auto.
-
-    left.
-    split.*)
-  Admitted.
+    
+    right; destruct H; auto.
+    
+    left; exists a; split; inversion H.
+    
+    left; exists a; split. 
+    inversion G1.
+    constructor 4.
+  Qed.
 
   Fact cl_rho_K_app_inv a v : K o a -r-> v -> exists b, v = K o b /\ a -r-> b.
   Proof.
@@ -109,16 +119,27 @@ Section cl_confluent.
                 | [ ? 
                 | [ ?
                   | (x1 & y1 & G1 & G2) ] ] ].
-    apply cl_rho_K_inv in G1; subst; auto.
-  Admitted.
+    apply cl_rho_K_inv in G1. subst. auto.
+    exists b1.
+    
+    split; auto.
+    exists a; split; inversion H; subst; inversion H0; inversion H.
+    
+    exists v; split; inversion H.
+    
+    exists v; split; inversion G1.
+  Qed.
 
   Fact cl_rho_S_app_inv a v : S o a -r-> v -> exists b, v = S o b /\ a -r-> b.
   Proof.
-    (**)
-    intros.
-    exists a.
-    split.
-  Admitted.
+    intro H.
+    
+    inversion H.
+    exists a; split; auto.
+    constructor 4.
+    
+    exists b; split; subst; inversion H2; auto.
+  Qed.
 
   Fact cl_rho_S_app2_inv a b v : S o a o b -r-> v -> exists x y, v = S o x o y /\ a -r-> x /\ b -r-> y.
   Proof.
@@ -171,7 +192,7 @@ Section cl_confluent.
 
     Focus 2.
     intros; do 2 cl_rho_inv_0.
-    exists (µ p); split; constructor 4.
+    exists (µ p). split; constructor 4.
 
     intros H1 H2.
     apply cl_rho_app_inv in H1.
@@ -180,7 +201,15 @@ Section cl_confluent.
              | [ (G1 & G2) | [ G1 | (x1 & y1 & G1 & G2) ] ] ];
     destruct H2 as [ (g2 & b2 & H0 & H1 & H2)  
              | [ (H1 & H2) | [ H1 | (x2 & y2 & H1 & H2) ] ] ]; subst.
-
+    
+    inversion 
+    exists (g1 o b1); split.
+    constructor 4.
+    inversion G1; inversion H1.
+    
+    
+    
+    
     admit.
 
     cl_rho_inv_0.
@@ -200,6 +229,7 @@ Section cl_confluent.
     
     discriminate H1.
     
+
     admit.
     
     admit.
