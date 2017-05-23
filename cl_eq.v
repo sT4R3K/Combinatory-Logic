@@ -63,51 +63,37 @@ Section cl_equivalence.
   
   Fact cl_eq_app x y a b : x ~cl y -> a ~cl b -> x o a ~cl y o b.
   Proof.
-    intros H0 H1.
-    induction H0.
-    apply cl_eq_trans with (x o a).
-    apply in_cl_eq_3.
-    constructor 1.
-    apply in_cl_eq_4.
-    auto.
+    intros H0 H1; induction H0.
     
-    apply cl_eq_trans with (x o a).
-    apply in_cl_eq_3.
-    constructor 2.
-    apply in_cl_eq_4.
-    auto.
+    apply cl_eq_trans with (x o a);
+      try (apply in_cl_eq_3; constructor 1);
+      try (apply in_cl_eq_4; auto).
     
-    apply cl_eq_trans with (x o z o (y o z) o a).
-    apply in_cl_eq_3.
-    constructor 3.
-    apply in_cl_eq_4.
-    auto.
+    apply cl_eq_trans with (x o a);
+      try (apply in_cl_eq_3; constructor 2);
+      try (apply in_cl_eq_4; auto).
+    
+    apply cl_eq_trans with (x o z o (y o z) o a);
+      try (apply in_cl_eq_3; constructor 3);
+      try (apply in_cl_eq_4; auto).
     
     apply in_cl_eq_4; auto.
     
-    apply cl_eq_trans with (x o a).
-    apply in_cl_eq_3.
-    apply cl_eq_sym.
-    auto.
+    apply cl_eq_trans with (x o a);
+      try (apply in_cl_eq_3; apply cl_eq_sym; auto);
+      try (apply in_cl_eq_4; auto).
     
-    apply in_cl_eq_4.
-    auto.
+    apply cl_eq_trans with (x o b);
+      try (apply in_cl_eq_4; auto);
+      try (apply in_cl_eq_3; apply cl_eq_trans with y; auto).
     
-    apply cl_eq_trans with (x o b).
-    apply in_cl_eq_4; auto.
-    apply in_cl_eq_3.
-    apply cl_eq_trans with y; auto.
+    apply cl_eq_trans with (y o z o a);
+      try (do 2 apply in_cl_eq_3; auto);
+      try (apply in_cl_eq_4; auto).
     
-    apply cl_eq_trans with (y o z o a).
-    do 2 apply in_cl_eq_3; auto.
-    apply in_cl_eq_4; auto.
-    
-    apply cl_eq_trans with (x o z o a).
-    
-    apply in_cl_eq_3; auto.
-    apply in_cl_eq_4; auto.
-    
-    apply in_cl_eq_4; auto.
+    apply cl_eq_trans with (x o z o a);
+      try (apply in_cl_eq_3; auto; apply in_cl_eq_4; auto);
+      try (apply in_cl_eq_4; auto).
   Qed.
   
   Fact cl_I_prop x : I o x ~cl x.
@@ -182,13 +168,11 @@ Section cl_equivalence.
     unfold cl_L.
     apply cl_eq_trans with ((B o D o D) o (B o D o D));
       try apply cl_D_prop.
-    
-    apply cl_eq_trans with (D o (D o (B o D o D)));
-      try apply cl_D_prop.
-    
-    apply cl_eq_trans with (D o (D o (B o D o D))).
-      apply cl_B_prop.
-    constructor 4.
+    do 2 (
+      apply cl_eq_trans with (D o (D o (B o D o D)));
+        try apply cl_D_prop;
+        try (apply cl_B_prop; constructor 4)
+    ).
   Qed.
   
 End cl_equivalence.
