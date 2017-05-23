@@ -87,9 +87,10 @@ Section inversion_lemmas.
                 | [ (f & H1 & H2)
                   | (f & H1 & H2) ] ] ] ]; subst; try discriminate H.
     
-    destruct H2. subst.  rewrite H0; rewrite H1;
-    do 0 right; left; auto.
-  Admitted.
+    exists a; split; apply cl_beta_var_0_inv in H2; contradiction.
+    
+    exists f; split; auto. 
+  Qed.
   
   Fact cl_beta_var_2_inv p a b v : µ p o a o b -b-> v -> (exists a', v = µ p o a' o b /\ a -b-> a')
                                                       \/ (exists b', v = µ p o a o b' /\ b -b-> b').
@@ -101,7 +102,19 @@ Section inversion_lemmas.
                 | [ (f & g & H & H2)
                 | [ (f & H & H2)
                   | (f & H & H2) ] ] ] ]; subst; try discriminate H.
-  Admitted.
+    
+    apply cl_beta_var_1_inv in H2;
+    destruct H2 as [ c Hc ];
+    left; exists c;  split. 
+    Focus 2. destruct Hc; auto.
+    
+    Focus 2.
+    right. exists f. split; auto.
+    
+    destruct Hc.
+    rewrite H.
+    auto.
+  Qed.
   
   Fact cl_beta_K_0_inv v : K -b-> v -> False.
   Proof.
@@ -123,6 +136,9 @@ Section inversion_lemmas.
                 | [ (x & y & z & H & _)
                 | [ (x & y & z & H & _ & _)
                   | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
+
+    apply cl_app_inj in H.
+
   Admitted.
   
   Fact cl_beta_K_2 a b v : K o a o b -b-> v -> v = a 
@@ -136,12 +152,20 @@ Section inversion_lemmas.
                 | [ (x & y & z & H & _)
                 | [ (x & y & z & H & _ & _)
                   | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
-    left.
-  (*autorewrite with (v = a) in H.*)
-    rewrite -> H.
-apply in_cl_beta_K.
-    apply in_cl_beta_K in H.
-    rewrite <- H.
+    
+    apply cl_app_inj in H; destruct H as [H0 H1].
+    apply cl_app_inj in H0; destruct H0 as [H2 H3].
+    rewrite H3.
+    left; auto.
+    
+    apply cl_app_inj in H; destruct H as [H0 H1].
+    right. left. exists a. inversion H0.
+    
+    Focus 2.
+    do 2 right.
+    apply cl_app_inj in H. destruct H.
+    rewrite H.
+(*    apply cl_beta_K_1_inv .*)
   Admitted.
   
   Fact cl_beta_S_0_inv v : S -b-> v -> False.
@@ -163,7 +187,10 @@ apply in_cl_beta_K.
                 | [ (y & H)
                 | [ (x & y & z & H & _)
                 | [ (x & y & z & H & _ & _)
-                  | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
+                  | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.  
+    exists a.
+
+    apply cl_app_inj in H. destruct H as [H0 H1].
   Admitted.
 
   Fact cl_beta_S_2_inv a b v :  S o a o b -b-> v
@@ -177,9 +204,10 @@ apply in_cl_beta_K.
                 | [ (x & y & z & H & _)
                 | [ (x & y & z & H & _ & _)
                   | (x & y & z & H & _ & _) ] ] ] ]; try discriminate H.
-    exists a.
-    left.
-    split.
+    
+    apply cl_app_inj in H. destruct H as [H0 H1].
+    exists b. left.
+
   Admitted.
   
   Fact cl_beta_I_0_inv v : I -b-> v -> False.

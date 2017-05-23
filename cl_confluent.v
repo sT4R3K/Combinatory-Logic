@@ -202,16 +202,25 @@ Section cl_confluent.
     destruct H2 as [ (g2 & b2 & H0 & H1 & H2)  
              | [ (H1 & H2) | [ H1 | (x2 & y2 & H1 & H2) ] ] ]; subst.
     
+    apply Hf.
+admit. admit.
+
+ (*  
+    exists b1; split. apply cl_rho_K_app_inv.
+    inversion H1. inversion G1. subst.
+
+    exists b2; split.
+    inversion H2. subst.
+    exists (g1 o b1); split.
+    constructor 4.
+    inversion H2.
+
+
     inversion 
     exists (g1 o b1); split.
     constructor 4.
     inversion G1; inversion H1.
-    
-    
-    
-    
-    admit.
-
+    *)
     cl_rho_inv_0.
     exists b1; split; auto; constructor.
 
@@ -223,31 +232,41 @@ Section cl_confluent.
     constructor 3.
     do 2 constructor 5; auto.
     
+    apply Ha.
+    constructor 4.
     admit.
+    exists v; split. constructor 4. constructor 4.
     
-    subst; exists v; split; constructor.
+    (*subst; exists v; split; constructor.*)
     
     discriminate H1.
     
-
-    admit.
+    inversion H1.
     
-    admit.
+ (*     apply Hf. *)
+    (*
+    inversion H1. subst.
+    exists u. split. constructor 4.
+    inversion H1.
+    inversion H.
+    7 *)
+    apply Ha.
+admit. admit.
    
-    admit.
+    inversion H1.
     
-    admit.
-
+    inversion H1; exists v; split; constructor 4.
+    
     discriminate H1.
     
     cl_rho_inv_2 x3 y3.
     exists (x3 o b2 o (y3 o b2)); split.
     do 2 constructor 5; auto.
     constructor.
-
-    admit.
     
-    admit.
+    inversion H1.
+    
+    inversion H1.
     
     apply cl_app_inj in H1; destruct H1 as (H1 & ?); subst y2.
     apply cl_app_inj, proj2 in H1; subst x2.
